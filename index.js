@@ -5,9 +5,9 @@ const path = require("path");
 var http = require("http");
 var https = require("https");
 var bodyParser = require("body-parser");
-var privateKey = fs.readFileSync("server.key", "utf8");
-var certificate = fs.readFileSync("server.crt", "utf8");
-var credentials = { key: privateKey, cert: certificate };
+//var privateKey = fs.readFileSync("server.key", "utf8");
+//var certificate = fs.readFileSync("server.crt", "utf8");
+//var credentials = { key: privateKey, cert: certificate };
 
 const app = express();
 
@@ -126,5 +126,5 @@ var httpServer = http.createServer(app);
 var httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(80);
-httpsServer.listen(443);
+//httpsServer.listen(443);
 console.log('Server at : http://localhost is running..')
