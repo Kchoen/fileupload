@@ -127,3 +127,4 @@ var httpsServer = https.createServer(credentials, app);
 
 httpServer.listen(80);
 httpsServer.listen(443);
+console.log('Server at : http://localhost is running..')
